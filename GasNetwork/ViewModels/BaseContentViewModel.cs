@@ -43,10 +43,12 @@ namespace GasNetwork.ViewModels
 
             TreeNodeVM.PropertyChanged += (sender, args) =>
             {
+           
                 if (args.PropertyName == nameof(TreeNodeVM.CurrentSelectedTree))
                 {
                     if (TreeNodeVM.CurrentSelectedTree?.TabList != null)
                     {
+                        // Копипаст кодв выще - явный прихнак того что бы эти строки стоит поместить в один метод
                         Tabs = Tab.CreateTabList(
                             new List<IViewModel> { MeteringUnitVM, ConsumptionVM, ArchivesVM, DataComletenessVM },
                             TreeNodeVM.CurrentSelectedTree?.TabList!);

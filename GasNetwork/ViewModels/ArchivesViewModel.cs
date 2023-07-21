@@ -45,6 +45,9 @@ namespace GasNetwork.ViewModels
             get => _endDatePicker;
             set
             {
+                // Очень плохая практика, всегда возникает небольой но разрыв, плюс еще нужны какие-то телодвижения
+                // по преобразованию этих граничнх занчений. Куда проше использововать
+                // StartDate >= X < EndDate результат будет тот же а сопровождаьт это в разы проще. 
                 _endDatePicker = value.Hour != 0 || value.Minute != 0 || value.Second != 0 ?
                     value : value.AddHours(23).AddMinutes(59).AddSeconds(59.99);
             }
@@ -68,6 +71,9 @@ namespace GasNetwork.ViewModels
 
         private async void ClickArchiveButton(IArchive archiveObject)
         {
+            // Зачет тут запускать задачу и сразу жадть ее окончания в чем смысл этой аснхронщины?
+            // проще просто написать
+            // DataFromArchive = await archiveObject.GetDataAsync(StartDatePicker, EndDatePicker)
             await Task.Run(() =>
             {
                 DataFromArchive = archiveObject.GetDataAsync(StartDatePicker, EndDatePicker).Result;

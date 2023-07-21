@@ -3,7 +3,9 @@ using System.Linq;
 
 namespace GasNetwork.Models
 {
-    public class Node : NotifyPropertyChanged
+    // Сомневаюсь что это модель вряд ли в терминах газорасределения есть такое понятие как узел дерева.
+    // 22 ссылки на объект это повод задуматься очень высокая зацепленность и кандидат на божественность.
+    public class Node : NotifyPropertyChanged 
     {
         public int Id { get; set; }
         public string? Name { get; set; }

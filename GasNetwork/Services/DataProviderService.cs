@@ -11,6 +11,7 @@ namespace GasNetwork.Services
     {
         public static ISettings? Settings { get; set; }
         private static string? _connectionString;
+        // зачем кому-то занть строу подключения а тем более безконтрольно ее изменять?
         public static string? ConnectionString
         {
             get => _connectionString;

@@ -19,6 +19,10 @@ namespace GasNetwork.Services
                 {
                     switch (index)
                     {
+                        // Очень полохая практика!  Для чего нужен ООП и всякие швблоны? Lля того чтобы минимизировать зацепления в коде
+                        // и обеспечить быструю расширяемость
+                        // а теперь прикиньте во скольких местах надо изменть ваш код чтоюы просто добавить новый архив с другим интрвалом
+                        // допустим годовой
                         case 0: archiveList.Add(new MonthlyArchive { Device = device }); break;
                         case 1: archiveList.Add(new DaylyArchive { Device = device }); break;
                         case 2: archiveList.Add(new IntervalArchive { Device = device }); break;

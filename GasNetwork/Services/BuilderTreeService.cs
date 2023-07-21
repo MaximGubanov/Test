@@ -10,6 +10,10 @@ namespace GasNetwork.Services
         public IDataProvider? Db { get; }
         public BuilderTreeService(IDataProvider db) => Db = db;
 
+        // сервисы не должны возвращать ObservableCollection  это подразумеват что у сервиса может быть состояние
+        // а StateFull сервисы это не часто не хорошо,
+        // а в конкретном случае вообне нет смысла в ObservableCollection если кому-то надо следить за измененеим это коллекиции пусть сам 
+        // оборачивает ее в ObservableCollection
         public ObservableCollection<Node> Run(string sql)
         {
             DataFromDb = Db?.ExecuteDataAsync<Node>(sql).Result;
@@ -23,7 +27,8 @@ namespace GasNetwork.Services
                 {
                     row.Parent = this;
                     row.Type = ENodeType.Consumer;
-                    row.IconPath = "/Assets/img/1.png";
+                    row.IconPath = "/Assets/img/1.png"; // бизнес слой вообзе не должен ничего занть о файловаой стркутуре вашего приложения
+                    // или это должн инкапсулироваться в класс Nore или вообще разрешатья на вышестоящих уровнях
                     FillChildNode(row);
                     Nodes?.Add(row);
                 }

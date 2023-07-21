@@ -55,6 +55,11 @@
                 {
                     if (this.SelectedNode != null)
                     {
+                        // сдесь явно нужена еще одна абстракция ViewModel не должна разбиратться в типах кторве есть в домене
+                        // те или надо создать специальную ViewModel которая обслуживате только тип Device
+                        // или сделать ApplicationService
+                        // или на сам Device возложить обязанности то чтению
+
                         if (this.SelectedNode.Type == ENodeType.Device)
                         {
                             Device = DeviceRepository.RetrievAsync(this.SelectedNode.Id).Result;

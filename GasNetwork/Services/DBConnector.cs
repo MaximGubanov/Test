@@ -19,6 +19,8 @@ public class SGSConnector : IConnector
     public ISettings Settings { get; set; }
     public SGSConnector(ISettings settings)
     {
+        // И тут строка подключения???
+        // 2 объета которые владеют одной и той же иформацией повод сделать рефакториг
         Settings = settings;
         FbConnection.ConnectionString = 
             $"Server={Settings!.Server}; " +

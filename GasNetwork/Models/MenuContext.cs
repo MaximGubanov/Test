@@ -4,6 +4,7 @@ using System;
 
 namespace GasNetwork.Models
 {
+    // Это тоже не модель, это чать отображения
     internal class MenuDataContext
     {
         private static void Exit() => Environment.Exit(0);

@@ -14,7 +14,7 @@ namespace GasNetwork.ViewModels
 
         public void Cancel()
         {
-            StartupMessage = "Cancelling...";
+            StartupMessage = "Cancelling..."; // неожтданно везде русский и бац английский. И вообще напмного правильнее все все строковые константы хранить в ресрсах
             _cts.Cancel();
         }
 

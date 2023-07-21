@@ -35,10 +35,14 @@ namespace GasNetwork.Services
                         })
                         .ToList();
                     conn.Close();
-
+                    // А в чем смыл оборочивать список в еще один сприсок
                     return new List<Archive>((IEnumerable<Archive>)result);
                 }
-                catch { }
+                catch {
+                // За подобное в моей команде пожизненный эцих с гвоздями
+                // проглатывать исклчюения зло. Или обрабатывай их или если не можешь
+                // паусть обрабатыаеет выше по стек то кто сможетэто сделать
+                }
 
                 return new List<Archive>((IEnumerable<Archive>)result) ?? throw new Exception();
             }
@@ -49,6 +53,8 @@ namespace GasNetwork.Services
             switch (archive.TypeArchive)
             {
                 case EArchType.Event:
+                    // вообще не понятно зачем вы объявляте многострочные стоки с помощю @ а потом делаете конкатенацию?
+
                     return $@"SELECT " +
                                $"ed.eventclass AS {nameof(EventArchive.IconPath)}, " +
                                $"e.devdate AS {nameof(EventArchive.EventArchDate)}, " +
@@ -61,7 +67,9 @@ namespace GasNetwork.Services
                            $"ON e.eventid = ed.id " +
                            $"WHERE deviceid = @id " +
                                $"AND e.devdate BETWEEN @startDate AND @endDate";
-
+                // Запросы ниже чем отлисча.тся друг от друга?
+                //  Все жто только для того чтоюы поодержтвать бессмысленную иерархю 
+                // И вто "плюсы" использования Dapper писать километровые запрос. В EF вам даже не пришлось писать слова SELECT
                 case EArchType.Dayly:
                     return $@"SELECT " +
                                 $"i.devdate AS {nameof(IntervalArchive.IntervalArchDate)}, " +

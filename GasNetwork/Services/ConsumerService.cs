@@ -9,6 +9,8 @@
         {
             try
             {
+
+                // Неожиданно вроде сервис а тут херак по голове - SQL запрос
                 var consumer = Db?.ExecuteDataAsync<Consumer>(
                     $"SELECT " +
                         $"ID as Id, " +
@@ -31,7 +33,9 @@
                 /// по индексу [0] 
                 if (consumer != null) return consumer[0];
             }
-            catch { }
+            catch {
+                // про проглатывание исключений я уже писал
+            }
 
             return new Consumer();
         }

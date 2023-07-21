@@ -7,6 +7,10 @@ public class DeviceParam : IDataGridRepresenter
     [DisplayDataGrid(HeaderName = "Раздел")]
     public string? Section { get; set; }
     
+    // метаданые для слоя отображения в модели.... не порядок.
+    // модель это сокральное место и она должна меняться только по одной пришине
+    // изменились бизнес-правила
+    // а тут по чиху какого-то GUI мы должы менять модель
     [DisplayDataGrid(
         HeaderName = "Дата считывания", 
         ColumnType = DataGridColumnType.DateTime)]

@@ -13,10 +13,13 @@ namespace GasNetwork.Models
 
         public virtual Task<List<Archive>> GetDataAsync(DateTime start, DateTime end)
         {
+            // а звчем это почему просто не сделать метод  GetDataAsync просто абстракным?
             throw new NotImplementedException();
         }
     }
-
+    // Я не вижу разнинцы между классами MonthlyArchive, DaylyArchive, IntervalArchive они отличаются только значениями свойста
+    // Nam и TypeArchive а их можно передвавать и в конструкторе класа
+    // Также не понятно зачем обявлять одни и теже своства в каждом наследднике. Для этого же есть родитель, почему не определить общие свойства там?
     public class MonthlyArchive : Archive, IArchive
     {
         public override EArchType TypeArchive { get; set; } = EArchType.Monthly;

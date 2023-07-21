@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace GasNetwork.Models
 {
+    // с каких это пор настройки приложения стали частью модели?
     public class Settings : NotifyPropertyChanged, ISettings
     {
         public string? Server { get; set; }

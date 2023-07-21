@@ -27,6 +27,8 @@ namespace GasNetwork.Models
 
         public Tree BecomeTheCurrentTree()
         {
+            
+            // очень неожиданно что какая-то вшивая сущность аже не агрегат управляет таким важным параметром как строка подклчюениеня. 
             DataProviderService.SetConnectionString(this);
             return this;
         }
@@ -34,6 +36,9 @@ namespace GasNetwork.Models
 
     public class SGSTree : Tree
     {
+
+        /// КАТОРГА!!!  ПОЖИЗНЕНАЯ КАТОРГА!!! НЕТ 3 ПОЖИЗНЕННЫХ КАТОРГ!! А ПОТОМ ЕЩЕ 3 РАССТРЕЛА И 3 ПОВЕШЕНЬЯ
+        // SQL запрос в объекте который не является частью уровня храннеия данных
         private protected override string? SQL { get; set; } =
             "SELECT NODETYPE as Type, OBJECTID as Id, NODENAME as Name, NODEPATH as Path, NODELEVEL as Level " +
             "FROM sgs_tree_node_order " +
@@ -49,6 +54,7 @@ namespace GasNetwork.Models
 
             TabList = new List<string>
             {
+                /// ОТКУДА ТУТ МОДЕЛИ ОТОБРАЖЕНИЯ!!! Об их сущестовании должы занать только контролы!!
                 nameof(MeteringUnitViewModel),
                 nameof(ConsumptionViewModel),
                 nameof(ArchivesViewModel),

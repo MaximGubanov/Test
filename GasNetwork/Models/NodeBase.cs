@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace GasNetwork.Models
 {
+ 
     public class NotifyPropertyChanged : INotifyPropertyChanged
     {   
         public event PropertyChangedEventHandler? PropertyChanged;

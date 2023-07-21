@@ -4958,24 +4958,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gubanovmv\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workflow\\GasNetwork\\GasNetwork\\GasNetwork.csproj",
+      "projectUniqueName": "C:\\Temp\\Test\\GasNetwork\\GasNetwork.csproj",
       "projectName": "GasNetwork",
-      "projectPath": "C:\\Workflow\\GasNetwork\\GasNetwork\\GasNetwork.csproj",
-      "packagesPath": "C:\\Users\\gubanovmv\\.nuget\\packages\\",
-      "outputPath": "C:\\Workflow\\GasNetwork\\GasNetwork\\obj\\",
+      "projectPath": "C:\\Temp\\Test\\GasNetwork\\GasNetwork.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Temp\\Test\\GasNetwork\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gubanovmv\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5066,7 +5061,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
