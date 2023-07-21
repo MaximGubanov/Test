@@ -1,0 +1,45 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GasNetwork.Views.ArchivesView"
+             xmlns:components="clr-namespace:GasNetwork.Components;assembly=GasNetwork">
+
+	<Grid RowDefinitions="Auto, Auto, *">
+		<StackPanel Grid.Row="0" Classes="BaseContentPanel">
+			<ComboBox MinWidth="240" Name="RangeTemplates"/>
+			<Label VerticalAlignment="Center"
+				   Content="C"
+				   Margin="6 0"/>
+			<CalendarDatePicker Watermark="Начало диапозона"
+								SelectedDate="{Binding StartDatePicker}"
+								Name="startDate"/>
+			<Label VerticalAlignment="Center"
+				   Margin="6 0"
+				   Content="по"/>
+			<CalendarDatePicker Watermark="Конец диапозона"
+								SelectedDate="{Binding EndDatePicker}"
+								Name="endDate"/>
+		</StackPanel>
+		<ItemsControl Grid.Row="1" Items="{Binding ArchiveButtonList}" Name="itemsControl">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<StackPanel Classes="BaseContentPanel" Height="26"/>
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Button Content="{Binding Name}"
+							Command="{Binding $parent[Grid].DataContext.ClickArchiveButton}"
+							CommandParameter="{Binding}"
+							Width="180">
+					</Button>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		<Grid Grid.Row="2">
+			<components:ArchiveDataGrid Data="{Binding DataFromArchive}"/>
+		</Grid>
+	</Grid>
+</UserControl>

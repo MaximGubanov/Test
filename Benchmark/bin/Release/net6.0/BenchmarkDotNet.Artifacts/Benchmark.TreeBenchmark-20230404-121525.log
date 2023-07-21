@@ -1,0 +1,261 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Workflow\GasNetwork\Benchmark\bin\Release\net6.0\3fd5a6d4-9877-4422-90c7-3f6a35b8bd1d
+// command took 1,03s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Workflow\GasNetwork\Benchmark\bin\Release\net6.0\3fd5a6d4-9877-4422-90c7-3f6a35b8bd1d
+// command took 14,92s and exited with 1
+// start dotnet  build -c Release --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Workflow\GasNetwork\Benchmark\bin\Release\net6.0\3fd5a6d4-9877-4422-90c7-3f6a35b8bd1d
+// command took 2,26s and exited with 0
+// ***** Done, took 00:00:18 (18.28 sec)   *****
+// Found 2 benchmarks:
+//   TreeBenchmark.TreeBuildTest: DefaultJob
+//   TreeBenchmark.GetDataFromDBTest: DefaultJob
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: TreeBenchmark.TreeBuildTest: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 3fd5a6d4-9877-4422-90c7-3f6a35b8bd1d.dll --anonymousPipes 2012 2008 --benchmarkName Benchmark.TreeBenchmark.TreeBuildTest --job Default --benchmarkId 0 in C:\Workflow\GasNetwork\Benchmark\bin\Release\net6.0\3fd5a6d4-9877-4422-90c7-3f6a35b8bd1d\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.15 (6.0.1523.11507), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 179100.00 ns, 179.1000 us/op
+WorkloadJitting  1: 1 op, 161361000.00 ns, 161.3610 ms/op
+
+WorkloadPilot    1: 2 op, 17896400.00 ns, 8.9482 ms/op
+WorkloadPilot    2: 3 op, 26170400.00 ns, 8.7235 ms/op
+WorkloadPilot    3: 4 op, 36779900.00 ns, 9.1950 ms/op
+WorkloadPilot    4: 5 op, 43715500.00 ns, 8.7431 ms/op
+WorkloadPilot    5: 6 op, 52900200.00 ns, 8.8167 ms/op
+WorkloadPilot    6: 7 op, 59096600.00 ns, 8.4424 ms/op
+WorkloadPilot    7: 8 op, 67202900.00 ns, 8.4004 ms/op
+WorkloadPilot    8: 9 op, 76801100.00 ns, 8.5335 ms/op
+WorkloadPilot    9: 10 op, 81235800.00 ns, 8.1236 ms/op
+WorkloadPilot   10: 11 op, 88545900.00 ns, 8.0496 ms/op
+WorkloadPilot   11: 12 op, 96670100.00 ns, 8.0558 ms/op
+WorkloadPilot   12: 13 op, 103451200.00 ns, 7.9578 ms/op
+WorkloadPilot   13: 14 op, 115021800.00 ns, 8.2158 ms/op
+WorkloadPilot   14: 15 op, 137993900.00 ns, 9.1996 ms/op
+WorkloadPilot   15: 16 op, 129929600.00 ns, 8.1206 ms/op
+WorkloadPilot   16: 32 op, 259966000.00 ns, 8.1239 ms/op
+WorkloadPilot   17: 64 op, 507224100.00 ns, 7.9254 ms/op
+
+WorkloadWarmup   1: 64 op, 513536600.00 ns, 8.0240 ms/op
+WorkloadWarmup   2: 64 op, 508011800.00 ns, 7.9377 ms/op
+WorkloadWarmup   3: 64 op, 508448100.00 ns, 7.9445 ms/op
+WorkloadWarmup   4: 64 op, 510232500.00 ns, 7.9724 ms/op
+WorkloadWarmup   5: 64 op, 508018500.00 ns, 7.9378 ms/op
+WorkloadWarmup   6: 64 op, 510748500.00 ns, 7.9804 ms/op
+WorkloadWarmup   7: 64 op, 510779100.00 ns, 7.9809 ms/op
+WorkloadWarmup   8: 64 op, 509334100.00 ns, 7.9583 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 64 op, 509794100.00 ns, 7.9655 ms/op
+WorkloadActual   2: 64 op, 510102900.00 ns, 7.9704 ms/op
+WorkloadActual   3: 64 op, 510195700.00 ns, 7.9718 ms/op
+WorkloadActual   4: 64 op, 508732700.00 ns, 7.9489 ms/op
+WorkloadActual   5: 64 op, 508386800.00 ns, 7.9435 ms/op
+WorkloadActual   6: 64 op, 507181100.00 ns, 7.9247 ms/op
+WorkloadActual   7: 64 op, 510030400.00 ns, 7.9692 ms/op
+WorkloadActual   8: 64 op, 527353400.00 ns, 8.2399 ms/op
+WorkloadActual   9: 64 op, 511037800.00 ns, 7.9850 ms/op
+WorkloadActual  10: 64 op, 531751300.00 ns, 8.3086 ms/op
+WorkloadActual  11: 64 op, 530475300.00 ns, 8.2887 ms/op
+WorkloadActual  12: 64 op, 509448600.00 ns, 7.9601 ms/op
+WorkloadActual  13: 64 op, 510348400.00 ns, 7.9742 ms/op
+WorkloadActual  14: 64 op, 510876300.00 ns, 7.9824 ms/op
+WorkloadActual  15: 64 op, 508900400.00 ns, 7.9516 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 64 op, 509794100.00 ns, 7.9655 ms/op
+WorkloadResult   2: 64 op, 510102900.00 ns, 7.9704 ms/op
+WorkloadResult   3: 64 op, 510195700.00 ns, 7.9718 ms/op
+WorkloadResult   4: 64 op, 508732700.00 ns, 7.9489 ms/op
+WorkloadResult   5: 64 op, 508386800.00 ns, 7.9435 ms/op
+WorkloadResult   6: 64 op, 507181100.00 ns, 7.9247 ms/op
+WorkloadResult   7: 64 op, 510030400.00 ns, 7.9692 ms/op
+WorkloadResult   8: 64 op, 511037800.00 ns, 7.9850 ms/op
+WorkloadResult   9: 64 op, 509448600.00 ns, 7.9601 ms/op
+WorkloadResult  10: 64 op, 510348400.00 ns, 7.9742 ms/op
+WorkloadResult  11: 64 op, 510876300.00 ns, 7.9824 ms/op
+WorkloadResult  12: 64 op, 508900400.00 ns, 7.9516 ms/op
+// GC:  0 0 0 2405064 64
+// Threading:  3 0 64
+
+// AfterAll
+// Benchmark Process 41080 has exited with code 0.
+
+Mean = 7.962 ms, StdErr = 0.005 ms (0.06%), N = 12, StdDev = 0.017 ms
+Min = 7.925 ms, Q1 = 7.951 ms, Median = 7.967 ms, Q3 = 7.972 ms, Max = 7.985 ms
+IQR = 0.021 ms, LowerFence = 7.919 ms, UpperFence = 8.005 ms
+ConfidenceInterval = [7.940 ms; 7.985 ms] (CI 99.9%), Margin = 0.022 ms (0.28% of Mean)
+Skewness = -0.63, Kurtosis = 2.38, MValue = 2
+
+// ** Remained 1 (50,0 %) benchmark(s) to run. Estimated finish 2023-04-04 12:16 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: TreeBenchmark.GetDataFromDBTest: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 3fd5a6d4-9877-4422-90c7-3f6a35b8bd1d.dll --anonymousPipes 1972 2044 --benchmarkName Benchmark.TreeBenchmark.GetDataFromDBTest --job Default --benchmarkId 1 in C:\Workflow\GasNetwork\Benchmark\bin\Release\net6.0\3fd5a6d4-9877-4422-90c7-3f6a35b8bd1d\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.15 (6.0.1523.11507), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 152600.00 ns, 152.6000 us/op
+WorkloadJitting  1: 1 op, 143244100.00 ns, 143.2441 ms/op
+
+WorkloadPilot    1: 2 op, 13885100.00 ns, 6.9425 ms/op
+WorkloadPilot    2: 3 op, 20396100.00 ns, 6.7987 ms/op
+WorkloadPilot    3: 4 op, 26914000.00 ns, 6.7285 ms/op
+WorkloadPilot    4: 5 op, 34230500.00 ns, 6.8461 ms/op
+WorkloadPilot    5: 6 op, 40910800.00 ns, 6.8185 ms/op
+WorkloadPilot    6: 7 op, 58402500.00 ns, 8.3432 ms/op
+WorkloadPilot    7: 8 op, 55735700.00 ns, 6.9670 ms/op
+WorkloadPilot    8: 9 op, 60089200.00 ns, 6.6766 ms/op
+WorkloadPilot    9: 10 op, 66667300.00 ns, 6.6667 ms/op
+WorkloadPilot   10: 11 op, 97559200.00 ns, 8.8690 ms/op
+WorkloadPilot   11: 12 op, 90945500.00 ns, 7.5788 ms/op
+WorkloadPilot   12: 13 op, 89565700.00 ns, 6.8897 ms/op
+WorkloadPilot   13: 14 op, 99812100.00 ns, 7.1294 ms/op
+WorkloadPilot   14: 15 op, 107242900.00 ns, 7.1495 ms/op
+WorkloadPilot   15: 16 op, 101695500.00 ns, 6.3560 ms/op
+WorkloadPilot   16: 32 op, 208388100.00 ns, 6.5121 ms/op
+WorkloadPilot   17: 64 op, 449380700.00 ns, 7.0216 ms/op
+WorkloadPilot   18: 128 op, 871712700.00 ns, 6.8103 ms/op
+
+WorkloadWarmup   1: 128 op, 840972500.00 ns, 6.5701 ms/op
+WorkloadWarmup   2: 128 op, 845405600.00 ns, 6.6047 ms/op
+WorkloadWarmup   3: 128 op, 849799700.00 ns, 6.6391 ms/op
+WorkloadWarmup   4: 128 op, 870462700.00 ns, 6.8005 ms/op
+WorkloadWarmup   5: 128 op, 869400300.00 ns, 6.7922 ms/op
+WorkloadWarmup   6: 128 op, 833447700.00 ns, 6.5113 ms/op
+WorkloadWarmup   7: 128 op, 828157900.00 ns, 6.4700 ms/op
+WorkloadWarmup   8: 128 op, 850259800.00 ns, 6.6427 ms/op
+WorkloadWarmup   9: 128 op, 833200400.00 ns, 6.5094 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 839964600.00 ns, 6.5622 ms/op
+WorkloadActual   2: 128 op, 834978900.00 ns, 6.5233 ms/op
+WorkloadActual   3: 128 op, 834490500.00 ns, 6.5195 ms/op
+WorkloadActual   4: 128 op, 849931800.00 ns, 6.6401 ms/op
+WorkloadActual   5: 128 op, 838740100.00 ns, 6.5527 ms/op
+WorkloadActual   6: 128 op, 831209900.00 ns, 6.4938 ms/op
+WorkloadActual   7: 128 op, 829820700.00 ns, 6.4830 ms/op
+WorkloadActual   8: 128 op, 844431000.00 ns, 6.5971 ms/op
+WorkloadActual   9: 128 op, 842610600.00 ns, 6.5829 ms/op
+WorkloadActual  10: 128 op, 827880100.00 ns, 6.4678 ms/op
+WorkloadActual  11: 128 op, 830849300.00 ns, 6.4910 ms/op
+WorkloadActual  12: 128 op, 846471000.00 ns, 6.6131 ms/op
+WorkloadActual  13: 128 op, 838200900.00 ns, 6.5484 ms/op
+WorkloadActual  14: 128 op, 829816500.00 ns, 6.4829 ms/op
+WorkloadActual  15: 128 op, 834379000.00 ns, 6.5186 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 839964600.00 ns, 6.5622 ms/op
+WorkloadResult   2: 128 op, 834978900.00 ns, 6.5233 ms/op
+WorkloadResult   3: 128 op, 834490500.00 ns, 6.5195 ms/op
+WorkloadResult   4: 128 op, 849931800.00 ns, 6.6401 ms/op
+WorkloadResult   5: 128 op, 838740100.00 ns, 6.5527 ms/op
+WorkloadResult   6: 128 op, 831209900.00 ns, 6.4938 ms/op
+WorkloadResult   7: 128 op, 829820700.00 ns, 6.4830 ms/op
+WorkloadResult   8: 128 op, 844431000.00 ns, 6.5971 ms/op
+WorkloadResult   9: 128 op, 842610600.00 ns, 6.5829 ms/op
+WorkloadResult  10: 128 op, 827880100.00 ns, 6.4678 ms/op
+WorkloadResult  11: 128 op, 830849300.00 ns, 6.4910 ms/op
+WorkloadResult  12: 128 op, 846471000.00 ns, 6.6131 ms/op
+WorkloadResult  13: 128 op, 838200900.00 ns, 6.5484 ms/op
+WorkloadResult  14: 128 op, 829816500.00 ns, 6.4829 ms/op
+WorkloadResult  15: 128 op, 834379000.00 ns, 6.5186 ms/op
+// GC:  6 1 0 38604480 128
+// Threading:  0 0 128
+
+// AfterAll
+// Benchmark Process 54016 has exited with code 0.
+
+Mean = 6.538 ms, StdErr = 0.014 ms (0.21%), N = 15, StdDev = 0.052 ms
+Min = 6.468 ms, Q1 = 6.492 ms, Median = 6.523 ms, Q3 = 6.573 ms, Max = 6.640 ms
+IQR = 0.080 ms, LowerFence = 6.372 ms, UpperFence = 6.693 ms
+ConfidenceInterval = [6.482 ms; 6.595 ms] (CI 99.9%), Margin = 0.056 ms (0.86% of Mean)
+Skewness = 0.4, Kurtosis = 1.82, MValue = 2
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2023-04-04 12:16 (0h 0m from now) **
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Сбалансированная)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\Benchmark.TreeBenchmark-report.csv
+  BenchmarkDotNet.Artifacts\results\Benchmark.TreeBenchmark-report-github.md
+  BenchmarkDotNet.Artifacts\results\Benchmark.TreeBenchmark-report.html
+
+// * Detailed results *
+TreeBenchmark.TreeBuildTest: DefaultJob
+Runtime = .NET 6.0.15 (6.0.1523.11507), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 7.962 ms, StdErr = 0.005 ms (0.06%), N = 12, StdDev = 0.017 ms
+Min = 7.925 ms, Q1 = 7.951 ms, Median = 7.967 ms, Q3 = 7.972 ms, Max = 7.985 ms
+IQR = 0.021 ms, LowerFence = 7.919 ms, UpperFence = 8.005 ms
+ConfidenceInterval = [7.940 ms; 7.985 ms] (CI 99.9%), Margin = 0.022 ms (0.28% of Mean)
+Skewness = -0.63, Kurtosis = 2.38, MValue = 2
+-------------------- Histogram --------------------
+[7.915 ms ; 7.995 ms) | @@@@@@@@@@@@
+---------------------------------------------------
+
+TreeBenchmark.GetDataFromDBTest: DefaultJob
+Runtime = .NET 6.0.15 (6.0.1523.11507), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 6.538 ms, StdErr = 0.014 ms (0.21%), N = 15, StdDev = 0.052 ms
+Min = 6.468 ms, Q1 = 6.492 ms, Median = 6.523 ms, Q3 = 6.573 ms, Max = 6.640 ms
+IQR = 0.080 ms, LowerFence = 6.372 ms, UpperFence = 6.693 ms
+ConfidenceInterval = [6.482 ms; 6.595 ms] (CI 99.9%), Margin = 0.056 ms (0.86% of Mean)
+Skewness = 0.4, Kurtosis = 1.82, MValue = 2
+-------------------- Histogram --------------------
+[6.440 ms ; 6.668 ms) | @@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.2604/22H2/2022Update)
+11th Gen Intel Core i5-11400 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=7.0.202
+  [Host]     : .NET 6.0.15 (6.0.1523.11507), X64 RyuJIT AVX2
+  DefaultJob : .NET 6.0.15 (6.0.1523.11507), X64 RyuJIT AVX2
+
+
+|            Method |     Mean |     Error |    StdDev | Rank |    Gen0 |   Gen1 | Allocated |
+|------------------ |---------:|----------:|----------:|-----:|--------:|-------:|----------:|
+|     TreeBuildTest | 7.962 ms | 0.0223 ms | 0.0174 ms |    2 |       - |      - |   36.7 KB |
+| GetDataFromDBTest | 6.538 ms | 0.0561 ms | 0.0525 ms |    1 | 46.8750 | 7.8125 | 294.53 KB |
+
+// * Hints *
+Outliers
+  TreeBenchmark.TreeBuildTest: Default -> 3 outliers were removed (8.24 ms..8.31 ms)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Rank      : Relative position of current benchmark mean among all benchmarks (Arabic style)
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Gen1      : GC Generation 1 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:38 (38.64 sec), executed benchmarks: 2
+
+Global total time: 00:00:57 (57.21 sec), executed benchmarks: 2
+// * Artifacts cleanup *

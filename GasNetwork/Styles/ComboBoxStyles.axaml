@@ -1,0 +1,23 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Style Selector="ComboBox">
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="BorderBrush" Value="Aqua"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="CornerRadius" Value="0"/>
+		<Setter Property="Padding" Value="6 0"/>
+		<Setter Property="Height" Value="30"/>
+		<Setter Property="MaxDropDownHeight" Value="400"/>
+	</Style>
+	<Style Selector="ToggleButton:checked">
+		<Setter Property="CornerRadius" Value="0"/>
+	</Style>
+	<Style Selector="ToggleButton:pointerover">
+		<Setter Property="CornerRadius" Value="0"/>
+	</Style>
+	<Style Selector="ComboBoxItem">
+		<Setter Property="Background" Value="White"/>
+	</Style>
+	
+</Styles>

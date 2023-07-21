@@ -1,0 +1,27 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Style Selector="DataGrid">
+		<Setter Property="IsReadOnly" Value="True"/>
+		<Setter Property="RowBackground" Value="AliceBlue"/>
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Foreground" Value="DarkSlateGray"/>
+		<Setter Property="VerticalGridLinesBrush" Value="Gainsboro"/>
+		<Setter Property="HorizontalGridLinesBrush" Value="Gainsboro"/>
+		<Setter Property="GridLinesVisibility" Value="All"/>
+		<Setter Property="CanUserResizeColumns" Value="True"/>
+	</Style>
+	<Style Selector="Rectangle#BackgroundRectangle">
+		<Setter Property="Fill" Value="LightSkyBlue"/>
+	</Style>
+	<Style Selector="DataGridColumnHeader">
+		<Setter Property="Background" Value="{StaticResource GradientWhiteToLightGray}"/>
+		<Setter Property="Padding" Value="12 0"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="Height" Value="40"/>
+	</Style>
+	<Style Selector="ContentPresenter > TextBlock">
+		<Setter Property="Foreground" Value="DarkSlateGray"/>
+	</Style>
+	
+</Styles>

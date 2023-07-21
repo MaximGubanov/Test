@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Remove="Assets\img\1436707801.jpg" />
+    <AvaloniaResource Remove="Assets\img\FolderBlueGrey.ico" />
+    <AvaloniaResource Remove="Assets\img\FolderBlueVertical.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\OpenSans-Regular.ttf" />
+    <None Remove="Assets\Fonts\PoiretOne-Regular.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Assets\img\1436707801.jpg" />
+    <None Remove="Assets\img\Folder.ico" />
+    <None Remove="Assets\img\FolderBlue.ico" />
+    <None Remove="Assets\img\FolderBlueGrey.ico" />
+    <None Remove="Assets\img\FolderBlueVertical.ico" />
+    <None Remove="Resources\Assya Font Official.otf" />
+    <None Remove="Resources\RifficFree-Bold.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Assets\img\Folder.ico" />
+    <ApplicationDefinition Include="Assets\img\FolderBlue.ico" />
+    <ApplicationDefinition Include="Assets\img\FolderBlueGrey.ico" />
+    <ApplicationDefinition Include="Assets\img\FolderBlueVertical.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="Assets\img\1436707801.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <AvaloniaResource Include="Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaXaml Remove="Resources\BaseStyle.axaml" />
+    <AvaloniaXaml Remove="Styles\TabControlStyles.axaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Styles\TabControlStyles.axaml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.21" />
+	<PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.21" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.21" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.21" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.21" />
+    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="0.10.19" />
+    <PackageReference Include="Citrus.Avalonia" Version="1.6.1" />
+    <PackageReference Include="Dapper" Version="2.0.143" />
+    <PackageReference Include="Dapper.Transaction" Version="2.0.123" />
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="9.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Update="Resources\BaseStyle.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Resources\TreeNodeContextMenu.axaml">
+      <SubType>Designer</SubType>
+    </AvaloniaResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\SplashView.axaml.cs">
+      <DependentUpon>SplashView.axaml</DependentUpon>
+    </Compile>
+    <Compile Remove="Converters\IntToByteStringConverter.cs" />
+    <Compile Update="Components\DataGridCustom.axaml.cs">
+      <DependentUpon>DataGridCustom.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+	
+  
+</Project>

@@ -1,0 +1,72 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:converters="clr-namespace:GasNetwork.Converters;assembly=GasNetwork"
+			 xmlns:models="clr-namespace:GasNetwork.Models;assembly=GasNetwork"
+             x:Class="GasNetwork.Views.TreeNodeView">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="avares://GasNetwork/Resources/TreeNodeContextMenu.axaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<converters:StringValueConverter x:Key="StringConverter"/>
+			<converters:BitmapAssetValueConverter x:Key="BitmapConverter"/>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid RowDefinitions="auto,auto,*"
+		  DataContext="{Binding	TreeNode}">
+		<!-- <TextBox Grid.Row="1" Classes="Search" Watermark="Поиск"/> -->
+		<!-- <StackPanel Grid.Row="0" Classes="BaseContentPanel"> -->
+		<!-- 	<StackPanel.Styles> -->
+		<!-- 		<Style Selector="Button"> -->
+		<!-- 			<Setter Property="Padding" Value="4"/> -->
+		<!-- 			<Setter Property="CornerRadius" Value="4"/> -->
+		<!-- 			<Setter Property="Margin" Value="0"/> -->
+		<!-- 		</Style> -->
+		<!-- 	</StackPanel.Styles> -->
+			<ItemsControl Grid.Row="0">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<StackPanel Classes="BaseContentPanel" Margin="0"/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+				<Button Content="{Binding SGSTree.Name}"
+						Command="{Binding MakeCurrentTreeNode}"
+						CommandParameter="{Binding SGSTree}"
+						Width="40" Height="26"/>
+				<Button Content="{Binding TMRTree.Name}"
+						Command="{Binding MakeCurrentTreeNode}"
+						CommandParameter="{Binding TMRTree}"
+						Width="40" Height="26"/>
+			</ItemsControl>
+		<!-- </StackPanel> -->
+		<TextBox Grid.Row="1" Classes="Search" Watermark="Поиск"/>
+		<TreeView Grid.Row="2"
+				  Items="{Binding CurrentSelectedTree.Nodes}"
+				  Name="Tree"
+				  Classes="Tree"
+				  SelectedItem="{Binding SelectedNode}">
+			<TreeView.DataTemplates>
+				<TreeDataTemplate DataType="models:Node"
+								  ItemsSource="{Binding Nodes}">
+					<StackPanel Orientation="Horizontal"
+								Name="TreeContextMenu"
+								ContextMenu="{DynamicResource TreeNodeContextMenu}">
+						<Image Source="{Binding	IconPath, Converter={StaticResource BitmapConverter}}"/>
+						<TextBlock Text="{Binding Name, 
+								   Converter={StaticResource StringConverter}, 
+								   ConverterParameter=20}"
+								   ToolTip.Tip="{Binding Name}"
+								   ToolTip.ShowDelay="200"
+								   Classes="tb"/>
+					</StackPanel>
+				</TreeDataTemplate>
+			</TreeView.DataTemplates>
+		</TreeView>
+	</Grid>
+	
+</UserControl>

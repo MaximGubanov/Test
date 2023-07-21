@@ -1,0 +1,99 @@
+is_global = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GasNetwork
+build_property.ProjectDir = C:\Workflow\GasNetwork\GasNetwork\
+
+[C:/Workflow/GasNetwork/GasNetwork/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Components/ArchiveDataGrid.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Components/DataGridCustom.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Resources/TreeNodeContextMenu.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Styles/ButtonStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Styles/CalendarDatePickerStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Styles/ComboBoxStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Styles/DataGridStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Styles/SeparatorStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Styles/StackPanelStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Styles/TreeNodeStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/ArchivesView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/BaseContentView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/ComplexView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/ConsumerView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/ConsumptionView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/DataComletenessView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/DeviceParamsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/FlowView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/MenuBarView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/MeteringDeviceView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/MeteringUnitView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/MeterView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/SplashView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/StatusView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/SurveyView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Workflow/GasNetwork/GasNetwork/Views/TreeNodeView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

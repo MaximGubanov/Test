@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GasNetwork", "GasNetwork\GasNetwork.csproj", "{FA638C85-DF79-436B-B745-B6C7AAA7D834}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark", "Benchmark\Benchmark.csproj", "{FE9DCDE1-F4FE-4B50-A0F8-CDB2C9187291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA638C85-DF79-436B-B745-B6C7AAA7D834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA638C85-DF79-436B-B745-B6C7AAA7D834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA638C85-DF79-436B-B745-B6C7AAA7D834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA638C85-DF79-436B-B745-B6C7AAA7D834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE9DCDE1-F4FE-4B50-A0F8-CDB2C9187291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE9DCDE1-F4FE-4B50-A0F8-CDB2C9187291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE9DCDE1-F4FE-4B50-A0F8-CDB2C9187291}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {276406B1-50E0-4F7A-904A-22B0194E22DF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GasNetwork.Views.BaseContentView"
+			 xmlns:view="clr-namespace:GasNetwork.Views">
+
+	<Grid RowDefinitions="auto,*,auto"
+		  DataContext="{Binding BaseContentVM}">
+		<view:FlowView Grid.Row="0" DataContext="{Binding FlowVM}"/>
+		<TabControl Items="{Binding Tabs}" Grid.Row="1">
+			<TabControl.ItemTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding Header}"/>
+				</DataTemplate>
+			</TabControl.ItemTemplate>
+			<TabControl.ContentTemplate>
+				<DataTemplate>
+					<ContentControl Content="{Binding Content}"/>
+				</DataTemplate>
+			</TabControl.ContentTemplate>
+		</TabControl>
+		<Grid Grid.Row="2">
+			<view:StatusView/>
+		</Grid>
+	</Grid>
+	
+</UserControl>

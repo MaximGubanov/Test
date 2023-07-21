@@ -1,0 +1,31 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+		xmlns:behavior="clr-namespace:GasNetwork.Behaviors;assembly=GasNetwork">
+	
+	<Style Selector="Button">
+		<Setter Property="Background" Value="{StaticResource BackgroundColor}"/>
+		<Setter Property="Margin" Value="0"/>
+		<Setter Property="Padding" Value="0"/>
+		<Setter Property="CornerRadius" Value="2"/>
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="(i:Interaction.Behaviors)">
+			<i:BehaviorCollectionTemplate>
+				<i:BehaviorCollection>
+					<behavior:ColorizeButton/>
+				</i:BehaviorCollection>
+			</i:BehaviorCollectionTemplate>
+		</Setter>
+	</Style>
+	
+	<Style Selector="Button:pointerover">
+		<Setter Property="Background" Value="{StaticResource BackgroundColorOnHover}"/>
+	</Style>
+
+	<Style Selector="Button.FlowPanel">
+		<Setter Property="Width" Value="100"/>
+		<Setter Property="Padding" Value="0 10"/>
+		<Setter Property="Margin" Value="0 8 0 4"/> 
+	</Style>
+	
+</Styles>

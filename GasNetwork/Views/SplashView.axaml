@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="6"
+        d:DesignHeight="4"
+		Width="100"
+		Height="40"
+        WindowStartupLocation="CenterScreen"
+        SystemDecorations="None"
+		Topmost="True"
+        x:Class="GasNetwork.Views.SplashScreen"
+        Title="SplashScreen">
+	
+	<Grid RowDefinitions="*,Auto">
+		<Image Source="/Assets/SplashDefault.jpg"
+			   Grid.Row="0"
+			   Stretch="Fill"/>
+		<Label Grid.Row="1"         
+               DockPanel.Dock="Bottom"
+               Content="{Binding StartupMessage}"
+               FontSize="12"
+               Background="AliceBlue"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" />
+	</Grid>
+</Window>

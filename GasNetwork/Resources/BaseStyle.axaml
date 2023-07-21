@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	
+	<SolidColorBrush Color="AliceBlue" x:Key="MainBackground"/>
+	<SolidColorBrush Color="CornflowerBlue" x:Key="BackgroundColor"/>
+	<SolidColorBrush Color="MediumSlateBlue" x:Key="BackgroundColorOnHover"/>
+	<SolidColorBrush Color="LimeGreen" x:Key="BackgroundColorSelected"/>
+
+	<LinearGradientBrush x:Key="GradientDimGrayToGrey"
+						 StartPoint="50%,0%" EndPoint="50%,100%">
+		<LinearGradientBrush.GradientStops>
+			<GradientStop Color="DimGray" Offset="0.3"/>
+			<GradientStop Color="Gray" Offset="1"/>
+		</LinearGradientBrush.GradientStops>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="GradientWhiteToLightGray"
+						 StartPoint="50%,0%" EndPoint="50%,100%">
+		<LinearGradientBrush.GradientStops>
+			<GradientStop Color="White" Offset="0.3"/>
+			<GradientStop Color="LightGray" Offset="1"/>
+		</LinearGradientBrush.GradientStops>
+	</LinearGradientBrush>
+	
+</ResourceDictionary>

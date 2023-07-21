@@ -1,0 +1,33 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GasNetwork.Views.FlowView"
+			 xmlns:m="clr-namespace:GasNetwork.Models;assembly=GasNetwork"
+			 xmlns:vm="clr-namespace:GasNetwork.ViewModels;assembly=GasNetwork">
+	
+	<Grid RowDefinitions="auto,auto">
+		<ItemsControl Items="{Binding Data}"
+					  Grid.Row="0">
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<StackPanel Orientation="Horizontal"
+								Spacing="6"/>
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+			<ItemsControl.ItemTemplate>
+				<DataTemplate DataType="{x:Type m:Flow}">
+					<Button Content="{Binding FlowNumber, StringFormat='Поток {0}'}"
+							Command="{Binding $parent[Grid].DataContext.ClickFlowButton}"
+							CommandParameter="{Binding}"
+							Classes="FlowPanel">
+					</Button>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+		<Separator Grid.Row="1"
+				   Margin="0 2 0 6"/>
+	</Grid>
+	
+</UserControl>

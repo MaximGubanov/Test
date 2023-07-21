@@ -1,0 +1,41 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:GasNetwork"
+             x:Class="GasNetwork.App">
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="/Resources/BaseStyle.axaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<FontFamily x:Key="OpenSans">Assets/Fonts/OpenSans-Regular.ttf#Open Sans</FontFamily>
+			<FontFamily x:Key="Roboto">Assets/Fonts/Roboto-Regular.ttf#Roboto</FontFamily>
+			<FontFamily x:Key="PoiretOne">Assets/Fonts/PoiretOne-Regular.ttf#Poiret One</FontFamily>
+		</ResourceDictionary>
+	</Application.Resources>
+
+	<Application.Styles>
+		<!--<FluentTheme/>-->
+		<StyleInclude Source="avares://Citrus.Avalonia/Citrus.xaml"/>
+		<StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Default.xaml"/>
+		<StyleInclude Source="/Styles/ButtonStyles.axaml"/>
+		<StyleInclude Source="/Styles/DataGridStyles.axaml"/>
+		<StyleInclude Source="/Styles/TabControlStyles.axaml"/>
+		<StyleInclude Source="/Styles/SeparatorStyles.axaml"/>
+		<StyleInclude Source="/Styles/TreeNodeStyles.axaml"/>
+		<StyleInclude Source="/Styles/ComboBoxStyles.axaml"/>
+		<StyleInclude Source="/Styles/CalendarDatePickerStyles.axaml"/>
+		<StyleInclude Source="/Styles/StackPanelStyles.axaml"/>
+
+		<!--WINDOW-->
+		<Style Selector=":is(Window)">
+			<Setter Property="FontFamily" Value="{StaticResource OpenSans}"/>
+			<Setter Property="Background" Value="AliceBlue"/>
+		</Style>
+
+    </Application.Styles>
+</Application>

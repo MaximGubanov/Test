@@ -1,0 +1,27 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	
+	<ContextMenu x:Key="TreeNodeContextMenu">
+		<MenuItem Header="?Добавить новый узел"
+				  Command="{Binding	AddNewNode}"
+				  CommandParameter="Новый узел" />
+		<MenuItem Header="{Binding Name, StringFormat='?Удалить {0}'}"
+				  Command="{Binding	RemoveNode}"
+				  CommandParameter="{Binding Id}" />
+		<Separator />
+		<MenuItem Header="{Binding Id, StringFormat='Копировать id узла: {0}'}"
+				  Command="{Binding	$parent[Window].DataContext.MenuDataContext.CopyId}"
+				  CommandParameter="{Binding Id}"/>
+		<Separator />
+		<MenuItem Header="{Binding Name, StringFormat='Сортировать {0}'}"
+				  Command="{Binding SortByName}"
+				  CommandParameter="{Binding Nodes}" 
+				  Icon="/Assets/avalonia-logo.ico"/>
+		<MenuItem>
+			<MenuItem.Icon>
+				<Image Source="/Assets/avalonia-logo.ico"/>
+			</MenuItem.Icon>
+		</MenuItem>
+	</ContextMenu>
+	
+</ResourceDictionary>
